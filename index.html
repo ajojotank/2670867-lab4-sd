@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST Countries API Lab</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <section class="map-container">
+            <article id="map"></article>
+        </section>
+        <section class="info-container">
+            <h1>Country Information</h1>
+            <input type="text" id="country-name" placeholder="Enter country name">
+            <button id="submit-button">Submit</button>
+            <aside id="loading" class="loading">Loading...</aside>
+            <section id="country-info"></section>
+            <section id="bordering-countries"></section>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
