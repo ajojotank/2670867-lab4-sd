@@ -19,6 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.getElementById('submit-button').addEventListener('click', function() {
+    const countryName = document.getElementById('country-name').value;
+    if (countryName) {
+        fetchCountryData(countryName);
+    } else {
+        alert('Please enter a country name.');
+    }
+});
+
 // Utility functions
 
 function displayError(message) {
@@ -35,6 +44,8 @@ function showLoading() {
 function hideLoading() {
     document.getElementById('loading').style.display = 'none';
 }
+
+// get country fucntions
 
 function fetchCountryByLatLng(lat, lng) {
     showLoading();
@@ -55,16 +66,6 @@ function fetchCountryByLatLng(lat, lng) {
             hideLoading();
         });
 }
-
-
-document.getElementById('submit-button').addEventListener('click', function() {
-    const countryName = document.getElementById('country-name').value;
-    if (countryName) {
-        fetchCountryData(countryName);
-    } else {
-        alert('Please enter a country name.');
-    }
-});
 
 function fetchCountryData(countryName) {
     showLoading();
